@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GeoCamo</string>
+    <string name="nav_radar">Radar GPS</string>
+    <string name="nav_card">Card WhatsApp</string>
+    <string name="nav_presets">Locais e Guia</string>
+    <string name="camo_active_title">Camuflagem de GPS Ativa</string>
+    <string name="camo_stop_action">Encerrar</string>
+    <string name="share_card_chooser">Compartilhar Card de Localização</string>
+</resources>

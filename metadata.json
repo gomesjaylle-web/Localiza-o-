@@ -1,0 +1,6 @@
+{
+  "name": "GeoCamo",
+  "description": "Camuflagem de localização em tempo real e gerador de card de localização estilo mensageiro para compartilhamento privado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
