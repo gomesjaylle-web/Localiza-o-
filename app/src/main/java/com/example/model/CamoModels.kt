@@ -1,9 +1,7 @@
 package com.example.model
 
-import com.squareup.moshi.JsonClass
 import java.util.Locale
 
-@JsonClass(generateAdapter = true)
 data class GeoPoint(
     val latitude: Double,
     val longitude: Double
@@ -27,7 +25,6 @@ enum class PlaceCategory(val label: String) {
     CUSTOM("Personalizado")
 }
 
-@JsonClass(generateAdapter = true)
 data class CamoPlace(
     val id: String,
     val name: String,

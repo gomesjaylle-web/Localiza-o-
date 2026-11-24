@@ -4,7 +4,6 @@ import com.example.model.CamoPlace
 import com.example.model.GeoPoint
 import com.example.model.PlaceCategory
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.Interceptor
@@ -15,7 +14,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 import java.util.concurrent.TimeUnit
 
-@JsonClass(generateAdapter = true)
 data class NominatimResult(
     @Json(name = "place_id") val placeId: Long,
     @Json(name = "display_name") val displayName: String,
@@ -25,14 +23,12 @@ data class NominatimResult(
     @Json(name = "type") val type: String? = null
 )
 
-@JsonClass(generateAdapter = true)
 data class NominatimReverseResult(
     @Json(name = "display_name") val displayName: String?,
     @Json(name = "name") val name: String? = null,
     @Json(name = "address") val address: NominatimAddress? = null
 )
 
-@JsonClass(generateAdapter = true)
 data class NominatimAddress(
     @Json(name = "road") val road: String? = null,
     @Json(name = "house_number") val houseNumber: String? = null,
