@@ -1,7 +1,9 @@
 package com.example.service
 
+import android.annotation.SuppressLint
 import android.app.AppOpsManager
 import android.content.Context
+import android.location.Criteria
 import android.location.Location
 import android.location.LocationManager
 import android.location.provider.ProviderProperties
@@ -202,6 +204,7 @@ class CamouflageLocationEngine(private val context: Context) {
         )
     }
 
+    @SuppressLint("WrongConstant")
     private fun ensureTestProviders(): Boolean {
         if (testProvidersRegistered) return true
         return try {
@@ -235,8 +238,8 @@ class CamouflageLocationEngine(private val context: Context) {
                         true,
                         true,
                         true,
-                        1,
-                        1
+                        Criteria.POWER_LOW,
+                        Criteria.ACCURACY_FINE
                     )
                 }
                 locationManager.setTestProviderEnabled(provider, true)
